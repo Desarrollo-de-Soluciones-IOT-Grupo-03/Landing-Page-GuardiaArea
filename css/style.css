@@ -330,3 +330,320 @@ header {
 		}
 	}
 }
+
+/* ! CHARACTERISTICS Carrusel */
+
+.characteristics {
+	min-height: 80dvh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.carousel {
+		position: relative;
+		overflow: hidden;
+
+		background: var(--background-main);
+		width: 100%;
+
+		/* sombra  */
+		box-shadow: 0 0 20px var(--accent-color);
+
+		.carousel_container {
+			display: flex;
+			transition: transform 0.5s ease;
+
+			padding: 3rem 0;
+
+			.carousel_slide {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				min-width: 100dvw;
+				text-align: center;
+				color: white;
+
+				div:nth-child(odd) {
+					width: 460px;
+					text-align: left;
+
+					h2 {
+						font-size: 4rem;
+						margin-bottom: 1rem;
+						font-weight: 700;
+					}
+
+					p {
+						font-size: 1.25rem;
+						margin-bottom: 1rem;
+					}
+				}
+
+				div:nth-child(even) {
+					width: 460px;
+					text-align: right;
+
+					h2 {
+						font-size: 4rem;
+						margin-bottom: 1rem;
+						font-weight: 700;
+					}
+
+					p {
+						font-size: 1.25rem;
+						margin-bottom: 1rem;
+					}
+				}
+
+				img {
+					width: 350px;
+					height: auto;
+				}
+			}
+		}
+
+		.carousel_control {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			border: none;
+			padding: 10px;
+			cursor: pointer;
+
+			&.left {
+				left: 10px;
+			}
+
+			&.right {
+				right: 10px;
+			}
+		}
+
+		.carousel_indicator {
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 1rem;
+
+			button {
+				width: 20px;
+				height: 20px;
+				border: 2px solid var(--primary-color);
+				background-color: transparent;
+				border-radius: 50%;
+				cursor: pointer;
+				transition: background-color 0.3s;
+
+				&.active {
+					background-color: var(--primary-color);
+				}
+			}
+		}
+	}
+
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+	.characteristics {
+		.carousel {
+			.carousel_container {
+				padding: 2rem 0;
+
+				.carousel_slide {
+					div:nth-child(odd) {
+						width: 400px;
+
+						h2 {
+							font-size: 2rem;
+						}
+
+						p {
+							font-size: 1rem;
+						}
+					}
+
+					div:nth-child(even) {
+						width: 400px;
+
+						h2 {
+							font-size: 2rem;
+						}
+
+						p {
+							font-size: 1rem;
+						}
+					}
+
+					img {
+						width: 200px;
+					}
+				}
+			}
+
+			.carousel_control {
+				padding: 5px;
+
+				svg {
+					width: 40px;
+					height: 40px;
+				}
+
+				&.left {
+					left: 5px;
+				}
+
+				&.right {
+					right: 5px;
+				}
+			}
+
+			.carousel_indicator {
+				button {
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.characteristics {
+		.carousel {
+			.carousel_container {
+				padding: 2rem 0;
+
+				.carousel_slide {
+
+					&:nth-child(odd) {
+						flex-direction: column;
+					}
+
+					&:nth-child(even) {
+						flex-direction: column-reverse;
+					}
+
+
+					div:nth-child(odd) {
+						text-align: center;
+
+						h2 {
+							font-size: 3rem;
+						}
+
+						p {
+							font-size: 1.2rem;
+						}
+					}
+
+					div:nth-child(even) {
+						text-align: center;
+
+						h2 {
+							font-size: 3rem;
+						}
+
+						p {
+							font-size: 1.2rem;
+						}
+					}
+
+					img {
+						width: 150px;
+					}
+				}
+			}
+
+			.carousel_control {
+				padding: 5px;
+
+				svg {
+					width: 30px;
+					height: 30px;
+				}
+
+				&.left {
+					left: 5px;
+				}
+
+				&.right {
+					right: 5px;
+				}
+			}
+
+			.carousel_indicator {
+				button {
+					width: 10px;
+					height: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.characteristics {
+		.carousel {
+			.carousel_container {
+
+				.carousel_slide {
+					div:nth-child(odd) {
+						width: 300px;
+
+						h2 {
+							font-size: 2rem;
+						}
+
+						p {
+							font-size: 1rem;
+						}
+					}
+
+					div:nth-child(even) {
+						width: 300px;
+
+						h2 {
+							font-size: 2rem;
+						}
+
+						p {
+							font-size: 1rem;
+						}
+
+						img {
+							width: 100px;
+						}
+					}
+				}
+			}
+
+			.carousel_control {
+				padding: 5px;
+
+				svg {
+					width: 30px;
+					height: 30px;
+				}
+
+				&.left {
+					left: 5px;
+				}
+
+				&.right {
+					right: 5px;
+				}
+			}
+
+			.carousel_indicator {
+				button {
+					width: 10px;
+					height: 10px;
+				}
+			}
+		}
+	}
+}
