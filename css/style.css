@@ -157,3 +157,176 @@ header {
 		padding: 0.5rem 2rem;
 	}
 }
+
+/* ! HERO */
+
+.hero {
+	min-height: 90dvh;
+
+	display: flex;
+	justify-content: center;
+
+	.hero_content {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+		padding: 2rem 2rem;
+
+		img {
+			width: 440px;
+		}
+
+		div {
+			max-width: 762px;
+			text-align: right;
+
+			h1 {
+				font-size: 4rem;
+				font-weight: 700;
+				color: var(--color-white);
+				margin-bottom: 1rem;
+			}
+
+			p {
+				font-size: 1.5rem;
+				color: var(--color-white);
+				margin-bottom: 1rem;
+			}
+
+			.download_buttons {
+				display: flex;
+				justify-content: flex-end;
+				gap: 1rem;
+				margin-top: 1rem;
+
+				button {
+					img {
+						height: 60px;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+	.hero {
+		.hero_content {
+			img {
+				width: 400px;
+			}
+
+			div {
+				text-align: center;
+
+				h1 {
+					font-size: 3rem;
+				}
+
+				p {
+					font-size: 1.2rem;
+				}
+
+				.download_buttons {
+					justify-content: center;
+
+					button {
+						img {
+							height: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		.hero_content {
+
+			align-content: center;
+
+			img {
+				width: 300px;
+			}
+
+			div {
+				h1 {
+					font-size: 2.5rem;
+				}
+
+				p {
+					font-size: 1.1rem;
+				}
+
+				.download_buttons {
+					button {
+						img {
+							height: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.hero {
+		.hero_content {
+			img {
+				width: 250px;
+			}
+
+			div {
+				h1 {
+					font-size: 2rem;
+				}
+
+				p {
+					font-size: 1rem;
+				}
+
+				.download_buttons {
+					button {
+						img {
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.hero {
+		.hero_content {
+			img {
+				width: 200px;
+			}
+
+			div {
+				h1 {
+					font-size: 1.8rem;
+				}
+
+				p {
+					font-size: 1rem;
+				}
+
+				.download_buttons {
+					button {
+						img {
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
