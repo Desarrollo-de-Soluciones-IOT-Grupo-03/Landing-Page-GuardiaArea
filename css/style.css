@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('./reset.css');
+
+:root {
+	--primary-color: #49BEFF;
+	--accent-color: #34A1DE;
+	--background-main: #02273A;
+	--card-primary: #E8F7FF;
+	--card-secondary: #EBF3FE;
+
+	--color-white: #fff;
+	--color-black: #000;
+
+}
+
+body {
+	font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background: linear-gradient(180deg,
+			#02273A 0%,
+			#064E74 10%,
+			#03334D 25%,
+			#0278B7 40%,
+			#064E74 77%,
+			#02273A 100%
+			);
+}
+
+/* ! HEADER */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
+	animation: enhance-header linear both;
+	animation-timeline: scroll(root block);
+	animation-range: 0 400px;
+
+	img {
+		width: 120px;
+	}
+
+	nav {
+		display: flex;
+		gap: 1rem;
+
+		ul {
+			display: flex;
+			gap: 5rem;
+			list-style: none;
+
+			li {
+				a {
+					text-decoration: none;
+					color: #fff;
+					font-weight: 500;
+					padding: 0.5rem 1rem;
+					border-bottom: 2px solid;
+					border-color: transparent;
+					transition: all 0.3s ease;
+
+					&:hover {
+						color: var(--accent-color);
+						border-color: var(--accent-color);
+					}
+				}
+			}
+		}
+	}
+
+	button {
+		color: var(--color-white);
+		padding: 0.5rem 3rem;
+		border: 2px solid var(--accent-color);
+		border-radius: 2rem;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: var(--accent-color);
+		}
+	}
+
+}
+
+/* ! Responsive HEADER */
+@media (max-width: 1200px) {
+	header {
+		font-size: 1rem;
+
+		img {
+			width: 100px;
+		}
+
+		nav ul {
+			gap: 1rem;
+
+			li a {
+				padding: 0.5rem 0.8rem;
+			}
+		}
+
+		button {
+			padding: 0.5rem 2rem;
+		}
+	}
+
+}
+
+@media (max-width: 768px) {
+	header {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 760px) {
+	header {
+		font-size: 1rem;
+
+		img {
+			width: 100px;
+		}
+
+		nav ul {
+			display: none;
+		}
+
+		button {
+			padding: 0.5rem 2rem;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	header {
+		font-size: 0.9rem;
+
+		img {
+			width: 90px;
+		}
+
+		button {
+			padding: 0.5rem 1.5rem;
+		}
+	}
+}
+
+@keyframes enhance-header {
+	to {
+		backdrop-filter: blur(15px);
+		font-size: 1.1rem;
+		padding: 0.5rem 2rem;
+	}
+}
