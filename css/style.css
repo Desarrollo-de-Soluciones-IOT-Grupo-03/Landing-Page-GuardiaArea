@@ -74,7 +74,7 @@ header {
 		}
 	}
 
-	button {
+	.btn-login {
 		color: var(--color-white);
 		padding: 0.5rem 3rem;
 		border: 2px solid var(--accent-color);
@@ -106,7 +106,7 @@ header {
 			}
 		}
 
-		button {
+		.btn-login {
 			padding: 0.5rem 2rem;
 		}
 	}
@@ -131,7 +131,7 @@ header {
 			display: none;
 		}
 
-		button {
+		.btn-login {
 			padding: 0.5rem 2rem;
 		}
 	}
@@ -145,7 +145,7 @@ header {
 			width: 90px;
 		}
 
-		button {
+		.btn-login {
 			padding: 0.5rem 1.5rem;
 		}
 	}
