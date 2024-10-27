@@ -46,25 +46,22 @@ document.getElementById("contactForm").addEventListener("submit", function (even
 	const plan = formData.get("plan");
 	const message = formData.get("message");
 
-
 	if (!name || !email || !subject || !phone || !plan || !message) {
-		alert("Por favor, completa todos los campos.");
+		alert("Please complete all fields.");
 		return;
 	}
-
 
 	if (!validateEmail(email)) {
-		alert("Por favor, ingresa un correo electrónico válido.");
+		alert("Please enter a valid email address.");
 		return;
 	}
-
 
 	if (!validatePhone(phone)) {
-		alert("Por favor, ingresa un número de teléfono válido (solo números).");
+		alert("Please enter a valid phone number (numbers only).");
 		return;
 	}
 
-	console.log("Enviando datos...");
+	console.log("Sending data...");
 	console.log({
 		name,
 		email,
@@ -74,16 +71,15 @@ document.getElementById("contactForm").addEventListener("submit", function (even
 		message,
 	});
 
-
 	fakeFetch("/submit", {
 		method: "POST",
 		body: formData,
 	})
 		.then((response) => {
-			alert("Formulario enviado con éxito.");
+			alert("Form successfully submitted.");
 		})
 		.catch((error) => {
-			alert("Hubo un error al enviar el formulario.");
+			alert("There was an error submitting the form.");
 		});
 });
 
@@ -113,4 +109,4 @@ function fakeFetch(url, options) {
 
 let btnCopyRight = document.getElementById('copyRight');
 
-btnCopyRight.innerHTML = `&copy; ${new Date().getFullYear()} Todos los derechos reservados`;
+btnCopyRight.innerHTML = `&copy; ${new Date().getFullYear()} All rights reserved`;
