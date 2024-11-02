@@ -653,6 +653,54 @@ header {
 	}
 }
 
+/* ! About guardian area */
+.about-product{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h2 {
+		max-width: 835px;
+		font-size: 4rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 2rem;
+		color: var(--color-white);
+	}
+
+	p {
+		font-size: 1.5rem;
+		text-align: center;
+		color: var(--color-white);
+		margin-bottom: 2rem;
+	}
+}
+
+/* ! About the team */
+.about-team {
+	margin-top: 6rem;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h2 {
+		max-width: 835px;
+		font-size: 4rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 2rem;
+		color: var(--color-white);
+	}
+
+	p {
+		font-size: 1.5rem;
+		text-align: center;
+		color: var(--color-white);
+		margin-bottom: 2rem;
+	}
+}
+
 /* ! Plans */
 
 .plans {
