@@ -653,51 +653,57 @@ header {
 	}
 }
 
-/* ! About guardian area */
-.about-product{
+/* ! About product and team */
+
+.about-product,
+.about-team {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	h2 {
-		max-width: 835px;
-		font-size: 4rem;
-		font-weight: 700;
-		text-align: center;
-		margin-bottom: 2rem;
-		color: var(--color-white);
-	}
-
-	p {
-		font-size: 1.5rem;
-		text-align: center;
-		color: var(--color-white);
-		margin-bottom: 2rem;
-	}
+	padding: 4rem 2rem;
 }
 
-/* ! About the team */
+.about-product h2,
+.about-team h2 {
+	max-width: 835px;
+	font-size: 4rem;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: var(--color-white);
+	line-height: 1.3;
+}
+
+.about-product p,
+.about-team p {
+	font-size: 1.5rem;
+	text-align: center;
+	color: var(--color-white);
+	max-width: 800px;
+	margin: 0 auto 1.5rem;
+	padding: 0 1rem;
+	line-height: 1.6;
+}
+
 .about-team {
+	background-color: #011a29;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	margin-top: 6rem;
 	margin-bottom: 2rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	h2 {
-		max-width: 835px;
-		font-size: 4rem;
-		font-weight: 700;
-		text-align: center;
-		margin-bottom: 2rem;
-		color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+	.about-product h2,
+	.about-team h2 {
+		font-size: 2.5rem;
 	}
 
-	p {
-		font-size: 1.5rem;
-		text-align: center;
-		color: var(--color-white);
-		margin-bottom: 2rem;
+	.about-product p,
+	.about-team p {
+		font-size: 1.2rem;
+		padding: 0 1rem;
 	}
 }
 
@@ -1626,3 +1632,99 @@ header {
 		  max-width: 300px;
 	  }
   }
+
+/* ! New */
+
+/* Hero Section */
+.hero h2 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	color: var(--accent-color);
+	margin: 0 0 1rem 0;
+	line-height: 1.4;
+	text-align: right;
+	letter-spacing: 0.5px;
+}
+
+@media (max-width: 1200px) {
+	.hero h2 {
+			font-size: 2rem;
+			text-align: center;
+			margin-bottom: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero h2 {
+			font-size: 1.5rem;
+			text-align: center;
+			margin-bottom: 1.2rem;
+			line-height: 1.5;
+	}
+}
+
+/* CTA Subscribe Section */
+.cta-subscribe {
+	background-color: var(--background-main);
+	padding: 6rem 2rem;
+	text-align: center;
+	color: var(--color-white);
+	margin-top: 3rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.cta-subscribe h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+	line-height: 1.3;
+	letter-spacing: 0.8px;
+}
+
+.cta-subscribe p {
+	font-size: 1.3rem;
+	max-width: 700px;
+	margin: 0 auto 2.5rem;
+	line-height: 1.5;
+	padding: 0 1rem;
+}
+
+/* Subscribe Button */
+.subscribe-button {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: var(--background-main);
+	background-color: var(--accent-color);
+	border: none;
+	border-radius: 1rem;
+	padding: 1rem 3rem;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+	width: fit-content;
+	margin: 0 auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-button:hover {
+	background-color: var(--primary-color);
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.subscribe-button:active {
+	transform: scale(0.98);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+	.cta-subscribe h2 {
+			font-size: 2.5rem;
+	}
+	.cta-subscribe p {
+			font-size: 1.1rem;
+	}
+	.subscribe-button {
+			padding: 0.8rem 2rem;
+	}
+}
